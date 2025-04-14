@@ -1,16 +1,11 @@
-LED1 Code:
+/* Filename: Lab  Task 1 Task i.cpp
+Author: Brandon Mills Jacinto
+Date: 30/01/2025
+*/
 
-/* mbed Microcontroller Library
- * Copyright (c) 2019 ARM Limited
- * SPDX-License-Identifier: Apache-2.0
- */
+#include "mbed.h" // I used the Mbed Library for Hardware control.
 
-#include "mbed.h"
-
-
-// Blinking rate in milliseconds
-#define BLINKING_RATE    500ms
-
+#define BLINKING_RATE    500ms // Blinking rate in milliseconds
 
 int main()
 {
