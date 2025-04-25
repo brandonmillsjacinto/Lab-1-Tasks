@@ -1,7 +1,7 @@
-/* mbed Microcontroller Library
- * Copyright (c) 2019 ARM Limited
- * SPDX-License-Identifier: Apache-2.0
- */
+/* Filename: Lab  Task 1 Task 1.cpp
+Author: Brandon Mills Jacinto
+Date: 30/01/2025
+*/
 
 #include "mbed.h"
 
