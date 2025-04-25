@@ -2,33 +2,27 @@
 Author: Brandon Mills Jacinto
 Date: 30/01/2025
 */
-
-#include "mbed.h"
-
-
-// Blinking rate in milliseconds
-#define BLINKING_RATEX    200ms
-#define BLINKING_RATEY    400ms
-#define BLINKING_RATEZ    600ms
-
+#include "mbed.h" // I used the Mbed Library for Hardware control.
+#define BLINKING_RATEX 200ms // Blinking rate "x" in milliseconds
+#define BLINKING_RATEY 400ms // Blinking rate "y" in milliseconds
+#define BLINKING_RATEZ 600ms // Blinking rate "z" in milliseconds
 
 int main()
 {
-    // Initalise the digital pin LED1 as an output
-    DigitalOut led1(LED1);
-    DigitalOut led2(LED2);
-    DigitalOut led3(LED3);
+ // Lines 12-15 initialised the three LEDs on the Nucleo Board.
+    DigitalOut led1(LED1); // LED1
+    DigitalOut led2(LED2); // LED2
+    DigitalOut led3(LED3); // LED3
 
-    while (true) {
-led1 = !led1;
-ThisThread::sleep_for(BLINKING_RATEX);
-led1 = !led1;
-led2 = !led2;
-ThisThread::sleep_for(BLINKING_RATEY);
-led2 = !led2;
-led3 = !led3;
-ThisThread::sleep_for(BLINKING_RATEZ);
-led3 = !led3;
-
+while (true) { // Infinite while look to keep the program running continuously
+led1 = !led1; // This toggles the LED1 state ON
+ThisThread::sleep_for(BLINKING_RATEX); // This line delays the program for specified BLINKING_RATEX (200ms).
+led1 = !led1; // This toggles the LED1 state OFF
+led2 = !led2; // This toggles the LED2 state ON
+ThisThread::sleep_for(BLINKING_RATEY); // This line delays the program for specified BLINKING_RATEY (400ms).
+led2 = !led2; // This toggles the LED2 state OFF
+led3 = !led3; // This toggles the LED3 state ON
+ThisThread::sleep_for(BLINKING_RATEZ); // This line delays the program for specified BLINKING_RATEZ (600ms).
+led3 = !led3; // This toggles the LED3 state OFF
      }
 }
